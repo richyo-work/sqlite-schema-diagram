@@ -49,7 +49,7 @@ SELECT
             t.name || ' [label=<
             <TABLE BORDER="0" CELLSPACING="0" CELLBORDER="1">
                 <TR>
-                    <TD COLSPAN="2"><B>' || t.name || '</B></TD>
+                    <TD COLSPAN="3"><B>' || t.name || '</B></TD>
                 </TR>
             '
 
@@ -70,6 +70,7 @@ SELECT
                     <TD PORT="' || i.name || '_to">' ||
                         CASE i.pk WHEN 0 THEN '&nbsp;' ELSE '🔑' END ||
                     '</TD>
+                    <TD>' || i.type || '</TD>
                     <TD PORT="' || i.name || '_from">' || i.name || '</TD>
                 </TR>
             ' ||
